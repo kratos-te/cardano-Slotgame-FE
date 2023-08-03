@@ -231,17 +231,17 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .mr-wallet-button {
   color: #fff;
-  width: 160px !important;
-  font-size: 14px !important;
-  font-weight: bold;
+  /* width: auto !important; */
+  font-size: 16px !important;
+  /* font-weight: bold; */
   border-radius: 10px !important;
-  height: 48px;
-  display: flex;
-  justify-content: space-between !important;
+  /* height: 48px; */
+  /* display: flex; */
+  /* justify-content: space-between !important; */
 }
 
 .mr-menu-list {
-  width: 160px !important;
+  /* width: auto !important; */
   font-size: 14px !important;
 }
 

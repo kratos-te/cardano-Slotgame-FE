@@ -25,7 +25,7 @@ export const depositFund = async (
     nebula_balance: number,
     dum_balance: number,
     konda_balance: number,
-    ada_balance: number
+    ada_balance: number,
 ) => {
     try {
         console.log("get data>>>>", address, nebula_balance, dum_balance,  konda_balance, ada_balance)
@@ -38,7 +38,8 @@ export const depositFund = async (
             konda_balance,
             ada_balance
         })
-        console.log(res);
+        console.log("deposit resutl", res);
+        return res.data
     } catch (error) {
         console.log(error)
     }
