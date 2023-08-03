@@ -23,7 +23,7 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
   const walletAddress = useAddress();
 
   const [wallet, setWallet] = useState("");
-  const [token, setToken] = useState("nebula");
+  const [token, setToken] = useState("ada");
   const [gameBalance, setGameBalance] = useState({
     ada: 0,
     nebula: 0,

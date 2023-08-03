@@ -2,28 +2,29 @@
 import { useMemo, useState, useEffect, useContext } from "react";
 import CoinValue from "./CoinValue";
 import SlotCell from "./SlotCell";
-import { SYMBOLS, SymbolItem } from "./Symbols";
+import { SYMBOLS } from "./Symbols";
 import WinsChart from "./WinsChart";
 import { generateRandomNumbers, sleep } from "../utils/util";
 import WinPopup from "./WinPopup";
 import { Howl } from "howler";
-import { DELAY_TIME, DEMO_WALLET, SPIN_TIME } from "../config";
+import { DELAY_TIME, SPIN_TIME } from "../config";
 import { play } from "../utils/api";
 import { GameContext } from "../context/GameProvider";
 import { BalanceType } from "../utils/types";
-import NumberCounter from "./NumberCounter";
 import TokenDropdown from "./TokenDropdown";
-import { UserContext, UserContextProps } from "../context/UserProvider";
 import { errorAlert } from "./ToastGroup";
+import { useWallet } from "@meshsdk/react";
 
 const SlotsContainer: React.FC = () => {
+
+  const { wallet, connected } = useWallet();
   const [positionY, setPositionY] = useState(0);
-  const { token, getGameBalance, wallet, gameBalance } =
+  const { token, getGameBalance, gameBalance } =
     useContext<any>(GameContext);
   const [blur, setBlur] = useState(10);
   const [randomFlag, setRandomFlag] = useState(false);
   const [isReset, setIsReset] = useState(false);
-  const [coinValue, setCoinValue] = useState(0.1);
+  const [coinValue, setCoinValue] = useState(10);
 
   const [isStarted, setIsStarted] = useState(false);
 
@@ -43,10 +44,6 @@ const SlotsContainer: React.FC = () => {
     getAmount: 0,
     multiplier: 0
   });
-
-  useEffect(() => {
-    console.log("gameball", gameBalance);
-  }, [gameBalance]);
 
   const onReset = () => {
     setIsSpinMoveEnd(true);
@@ -72,10 +69,10 @@ const SlotsContainer: React.FC = () => {
     console.log("spin!");
     setIsStarted(true);
     onReset();
-    if (wallet !== "") {
+    if (connected && wallet) {
       getGameBalance();
       console.log("wallet, token, amount", wallet, token, coinValue);
-      const res = await play(wallet, token, coinValue.toString());
+      const res = await play(wallet as unknown as string, token, coinValue.toString());
       console.log("api res", res);
 
       if (res && res.result) {
@@ -147,7 +144,7 @@ const SlotsContainer: React.FC = () => {
     <>
       <div className="fixed top-0 left-0 z-10 flex flex-col items-center justify-center w-full h-full backdrop-blur-md">
         <div className="flex flex-col items-center">
-          {gameBalance && wallet !== "" && <BalaneBox balance={gameBalance} />}
+          {connected && <BalaneBox balance={gameBalance} />}
           <div className="">
             <div className="w-[800px] relative">
               <img
