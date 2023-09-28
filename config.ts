@@ -1,7 +1,18 @@
-export const SPIN_TIME = 8000;
-export const DELAY_TIME = 3000;
-export const API_URL = "http://localhost:3002"
-export const DEMO_WALLET = "addr_test1vq6wpgx36vestuh4p68yvqcxadd5mj7r9qztzev5gyegxggffwej8";
+export const SPIN_TIME = 13000;
+export const DELAY_TIME = 7000;
+export const API_URL = "https://api.spacerace.site"
+// export const API_URL = "http://localhost:3002"
+export const DEMO_WALLET =
+  "addr1v8kmayk5e3pp8dxgj63j82v3egp7wneye7d3lfvtah0uaxcld8p2q";
+
+export const DUM_POLICY_ID =
+  "3222adc61e7488c611d4194963eb2d6a8b7cf3c87f471620b5b2422c44554d";
+export const NEBULA_POLICY_ID =
+"3744d5e39333c384505214958c4ed66591a052778512e56caf420f624e4542554c41";
+export const KONDA_POLICY_ID =
+"501dd5d2fbab6af0a26b1421076ff3afc4d5a34d6b3f9694571116ea4b4f4e4441";
+export const SNEK_POLICY_ID =
+"279c909f348e533da5808898f87f9a14bb2c3dfbbacccd631d927a3f534e454b";
 
 
 export const CASINO_SLOGANS = [
@@ -89,5 +100,8 @@ export const TOKENS = [
     },
     {
         symbol: "konda",
+    },
+    {
+        symbol: "snek",
     }
 ]

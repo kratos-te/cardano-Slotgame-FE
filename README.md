@@ -1,35 +1,29 @@
-# Sign in with Wallet Next.js TypeScript
+# SpaceRace
 
-Cryptographically prove the ownership of a wallet by signing a piece of data using data sign [[Read more](https://meshjs.dev/guides/prove-wallet-ownership)]
+This is slot game on cardano network. Users can play this game using $ADA or $NEBULA or $DUM or $KONDA token.
 
-## Getting Started
+### Token Policy IDs:
+- $Nebula Policy ID: 3744d5e39333c384505214958c4ed66591a052778512e56caf420f62
+- $Dum Policy ID: 3222adc61e7488c611d4194963eb2d6a8b7cf3c87f471620b5b2422c
+- $Konda Policy ID: 501dd5d2fbab6af0a26b1421076ff3afc4d5a34d6b3f9694571116ea
 
-Start project locally using CLI:
+### Token vaults:
+- $Nebula vault: addr1qyruqqptlds9ruwxq45y28669y7q4qu233hmzt2ck260f2s296su9q00c29c8ud846jhyayzeprsa4fygumw0ycrmgssxu8q3z
+- $Dum vault: addr1qy9nfxtvhynz4nprp2u9h49k6kj9agf3phzysd2tx6l0qr33mpvdrwners5m4k3tyuvl50pmhvy5rn77khnsxrh9p8us4hckee
+- $Konda vault: addr1q8k0lwx05cmwwf8278pjke6edgk4s8la6ycwghkjyzxnnj6a80hnqcjwn9e50ztl54fvnzt7xfu6lkcqyc3vzux5qa2q3m0p63
 
-```bash
-npx create-mesh-app leap -t signin -s next -l ts
-```
+### How to play game:
 
-Start your project on [Demeter](https://demeter.run/):
+1. User connects the `Cardano` wallet.
+2. Deposit some amount from wallet to game vault (`$ADA`, `$Nebula`, `$Dum`, and `$Konda`)
+3. User can choose one of tokens and spin.
+4. If 2 `jetpack` are side by side, he wins the game and will get 1.2x than he betted Or if 3 `jetpack` are side by side, he will get 1.3x than betted.
+5. Others are similar like this.
+6. User can withdraw the amount from game vault to the wallet.
 
-[![Code in Cardano Workspace](https://demeter.run/code/badge.svg)](https://demeter.run/code?repository=https://github.com/MeshJS/signin-next-ts-template.git&template=typescript)
 
-## Learn More
-
-### [React components and hooks](https://meshjs.dev/react)
-
-Frontend components for wallet connections, and useful React hooks to getting wallet states - Mesh provides everything you need to bring your Web3 user interface to life.
-
-### [APIs](https://meshjs.dev/apis)
-
-From wallet integrations to transaction builders, Mesh makes Web3 development easy with reliable, scalable, and well-engineered APIs & developer tools.
-
-### [Guides](https://meshjs.dev/guides)
-
-Whether you are new to web development or a seasoned blockchain full-stack developer, these guides will help you get started.
-
-## Connect with us
-
-Follow us on [Twitter](https://twitter.com/meshsdk) for updates.
-
-Join our [Discord](https://discord.gg/Z6AH9dahdH) for any questions and suggestions.
+When spin the game, it will require the transaction fee per each spin.
+- `$ada` (1 ada will go to the `$nebula` vault)
+- `$nebula` (1 ada will go to the `$nebula` vault)
+- `$dum` (1 ada: 50% will go to `$nebula` vault and another 50% will go to `$dum` vault)
+- `$konda` (1 ada: 50% will go to `$nebula` vault and another 50% will go to `$konda` vault)

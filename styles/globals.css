@@ -248,3 +248,10 @@ input[type="number"]::-webkit-outer-spin-button {
 .mr-menu-list * {
   color: #fff !important;
 }
+
+.img-responsive {
+  /* @media (max-width: 1024px) {
+    position:fixed !important
+  } */
+  position:fixed !important
+}

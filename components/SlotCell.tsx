@@ -34,15 +34,15 @@ const SlotCell: FC<CellProps> = ({
       >
         {symbols.map((item, key) => (
           <div
-            className={`w-[150px] h-[150px] flex items-center justify-center p-4 ${
+            className={`w-[150px] h-[150px] flex items-center justify-center p-4  ${
               key > symbols.length - 4 &&
-              item.weight === 2 &&
-              item.reward == 1 &&
-              item.id === 0 &&
+              item.weight > 0 &&
+              item.reward > 0 &&
+              item.label.length > 2 &&
               isSpinMoveEnd
                 ? "zoom"
                 : ""
-            } `}
+            } max-lg:w-[120px] max-lg:h-[120px] max-md:w-[100px] max-md:h-[100px] max-sm:w-[80px] max-sm:h-[80px]`}
             key={key}
           >
             {item.media}
