@@ -4,13 +4,11 @@ import { API_URL, DEMO_WALLET } from '../config';
 export const play = async (wallet: string, token: string, amount: string) => {
 
     try {
-        console.log("api data", wallet, token, amount)
         const res = await axios.post(`${API_URL}/play`, {
             wallet: wallet,
             token: token,
             score: amount
         })
-        console.log("backend api res:", res.data);
         return res.data
     } catch (error) {
         console.log(error)
@@ -26,9 +24,9 @@ export const depositFund = async (
     dum_balance: number,
     konda_balance: number,
     ada_balance: number,
+    snek_balance: number,
 ) => {
     try {
-        console.log("get data>>>>", address, nebula_balance, dum_balance,  konda_balance, ada_balance)
         const res = await axios.post(`${API_URL}/deposit`, {
             address,
             DEMO_WALLET,
@@ -36,9 +34,9 @@ export const depositFund = async (
             nebula_balance,
             dum_balance,
             konda_balance,
-            ada_balance
+            ada_balance,
+            snek_balance
         })
-        console.log("deposit resutl", res);
         return res.data
     } catch (error) {
         console.log(error)
@@ -50,7 +48,8 @@ export const withdrawFund = async (
     nebula: number,
     dum: number,
     konda: number,
-    ada: number
+    ada: number,
+    snek: number
 ) => {
     try {
         const res = await axios.post(`${API_URL}/withdrawFund`, {
@@ -58,9 +57,11 @@ export const withdrawFund = async (
             nebula,
             dum,
             konda,
-            ada
+            ada,
+            snek
         })
         console.log(res);
+        return res.data
     } catch (error) {
         console.log(error)
     }
@@ -68,14 +69,31 @@ export const withdrawFund = async (
 export const getAmount = async (wallet: string) => {
     if(wallet === undefined) return null
     try {
-        console.log("get amount wallet:", wallet);
         const res = await axios.post(`${API_URL}/getAmount`, { wallet })
-        console.log("==========================================")
-        console.log("get amount res", res, wallet);
         return res.data
 
     } catch (error) {
         console.log(error)
     }
 }
+
+export const getRankingData = async () => {
+    try {
+        const res = await axios.post(`${API_URL}/getRanking`)
+        return res.data
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+// export const getTransaction = async (wallet: string) => {
+//     if(wallet === undefined) return null
+//     try {
+//         const res = await axios.post(`${API_URL}/getTransaction`, {wallet})
+//         return res.data
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
 

@@ -70,7 +70,7 @@ export const SYMBOLS: SymbolItem[] = [
     ),
     weight: 0,
     reward: 0,
-    id: 14
+    id: 13
   },
   {
     label: "8",
@@ -79,7 +79,7 @@ export const SYMBOLS: SymbolItem[] = [
     ),
     weight: 0,
     reward: 0,
-    id: 15
+    id: 14
   },
   {
     label: "9",
@@ -88,7 +88,7 @@ export const SYMBOLS: SymbolItem[] = [
     ),
     weight: 0,
     reward: 0,
-    id: 16
+    id: 15
   },
   {
     label: "A",
@@ -97,7 +97,7 @@ export const SYMBOLS: SymbolItem[] = [
     ),
     weight: 0,
     reward: 0,
-    id: 17
+    id: 16
   },
   {
     label: "B",
@@ -106,7 +106,7 @@ export const SYMBOLS: SymbolItem[] = [
     ),
     weight: 0,
     reward: 0,
-    id: 18
+    id: 17
   },
   {
     label: "C",
@@ -115,7 +115,7 @@ export const SYMBOLS: SymbolItem[] = [
     ),
     weight: 0,
     reward: 0,
-    id: 19
+    id: 18
   },
   {
     label: "D",
@@ -124,7 +124,7 @@ export const SYMBOLS: SymbolItem[] = [
     ),
     weight: 0,
     reward: 0,
-    id: 20
+    id: 19
   },
   {
     label: "E",
@@ -133,7 +133,7 @@ export const SYMBOLS: SymbolItem[] = [
     ),
     weight: 0,
     reward: 0,
-    id: 21
+    id: 20
   },
   {
     label: "F",
@@ -142,7 +142,7 @@ export const SYMBOLS: SymbolItem[] = [
     ),
     weight: 0,
     reward: 0,
-    id: 22
+    id: 21
   },
   {
     label: "G",
@@ -151,7 +151,7 @@ export const SYMBOLS: SymbolItem[] = [
     ),
     weight: 0,
     reward: 0,
-    id: 23
+    id: 22
   },
   {
     label: "H",
@@ -160,7 +160,7 @@ export const SYMBOLS: SymbolItem[] = [
     ),
     weight: 0,
     reward: 0,
-    id: 24
+    id: 23
   },
   {
     label: "I",
@@ -178,9 +178,9 @@ export const SYMBOLS: SymbolItem[] = [
     media: (
       <img src={"/images/symbols/alien.png"} className="w-full h-full" alt="" />
     ),
-    weight: 1,
-    reward: 1,
-    id: 1
+    weight: 6,
+    reward: 6,
+    id: 5
   },
   {
     label: "Commet",
@@ -191,9 +191,9 @@ export const SYMBOLS: SymbolItem[] = [
         alt=""
       />
     ),
-    weight: 1,
-    reward: 1,
-    id: 2
+    weight: 5,
+    reward: 5,
+    id: 4
   },
   {
     label: "Jetpack",
@@ -204,9 +204,9 @@ export const SYMBOLS: SymbolItem[] = [
         alt=""
       />
     ),
-    weight: 2,
-    reward: 1,
-    id: 0
+    weight: 4,
+    reward: 4,
+    id: 3
   },
   {
     label: "Netbula",
@@ -217,9 +217,9 @@ export const SYMBOLS: SymbolItem[] = [
         alt=""
       />
     ),
-    weight: 1,
-    reward: 1,
-    id: 3
+    weight: 3,
+    reward: 3,
+    id: 2
   },
   {
     label: "Rocket",
@@ -230,9 +230,9 @@ export const SYMBOLS: SymbolItem[] = [
         alt=""
       />
     ),
-    weight: 1,
-    reward: 1,
-    id: 4
+    weight: 2,
+    reward: 2,
+    id: 1
   },
   {
     label: "Saturn",
@@ -245,6 +245,250 @@ export const SYMBOLS: SymbolItem[] = [
     ),
     weight: 1,
     reward: 1,
-    id: 5
+    id: 0
   }
 ];
+
+
+
+export const SNEK_SYMBOLS: SymbolItem[] = [
+  {
+    label: "1",
+    media: (
+      <img src={"/images/snek_symbols/snek_1.png"} className="w-full h-full" alt="" />
+    ),
+    weight: 0,
+    reward: 0,
+    id: 7
+  },
+  {
+    label: "2",
+    media: (
+      <img src={"/images/snek_symbols/snek_2.png"} className="w-full h-full" alt="" />
+    ),
+    weight: 0,
+    reward: 0,
+    id: 8
+  },
+  {
+    label: "3",
+    media: (
+      <img src={"/images/snek_symbols/snek_3.png"} className="w-full h-full" alt="" />
+    ),
+    weight: 0,
+    reward: 0,
+    id: 9
+  },
+  {
+    label: "4",
+    media: (
+      <img src={"/images/snek_symbols/snek_4.png"} className="w-full h-full" alt="" />
+    ),
+    weight: 0,
+    reward: 0,
+    id: 10
+  },
+  {
+    label: "5",
+    media: (
+      <img src={"/images/snek_symbols/snek_5.png"} className="w-full h-full" alt="" />
+    ),
+    weight: 0,
+    reward: 0,
+    id: 11
+  },
+  {
+    label: "6",
+    media: (
+      <img src={"/images/snek_symbols/snek_6.png"} className="w-full h-full" alt="" />
+    ),
+    weight: 0,
+    reward: 0,
+    id: 12
+  },
+  {
+    label: "7",
+    media: (
+      <img src={"/images/snek_symbols/snek_7.png"} className="w-full h-full" alt="" />
+    ),
+    weight: 0,
+    reward: 0,
+    id: 13
+  },
+  {
+    label: "8",
+    media: (
+      <img src={"/images/snek_symbols/snek_8.png"} className="w-full h-full" alt="" />
+    ),
+    weight: 0,
+    reward: 0,
+    id: 14
+  },
+  {
+    label: "9",
+    media: (
+      <img src={"/images/snek_symbols/snek_9.png"} className="w-full h-full" alt="" />
+    ),
+    weight: 0,
+    reward: 0,
+    id: 15
+  },
+  {
+    label: "A",
+    media: (
+      <img src={"/images/snek_symbols/snek_a.png"} className="w-full h-full" alt="" />
+    ),
+    weight: 0,
+    reward: 0,
+    id: 16
+  },
+  {
+    label: "B",
+    media: (
+      <img src={"/images/snek_symbols/snek_b.png"} className="w-full h-full" alt="" />
+    ),
+    weight: 0,
+    reward: 0,
+    id: 17
+  },
+  {
+    label: "C",
+    media: (
+      <img src={"/images/snek_symbols/snek_c.png"} className="w-full h-full" alt="" />
+    ),
+    weight: 0,
+    reward: 0,
+    id: 18
+  },
+  {
+    label: "D",
+    media: (
+      <img src={"/images/snek_symbols/snek_d.png"} className="w-full h-full" alt="" />
+    ),
+    weight: 0,
+    reward: 0,
+    id: 19
+  },
+  {
+    label: "E",
+    media: (
+      <img src={"/images/snek_symbols/snek_e.png"} className="w-full h-full" alt="" />
+    ),
+    weight: 0,
+    reward: 0,
+    id: 20
+  },
+  {
+    label: "F",
+    media: (
+      <img src={"/images/snek_symbols/snek_f.png"} className="w-full h-full" alt="" />
+    ),
+    weight: 0,
+    reward: 0,
+    id: 21
+  },
+  {
+    label: "G",
+    media: (
+      <img src={"/images/snek_symbols/snek_g.png"} className="w-full h-full" alt="" />
+    ),
+    weight: 0,
+    reward: 0,
+    id: 22
+  },
+  {
+    label: "H",
+    media: (
+      <img src={"/images/snek_symbols/snek_h.png"} className="w-full h-full" alt="" />
+    ),
+    weight: 0,
+    reward: 0,
+    id: 23
+  },
+  {
+    label: "I",
+    media: (
+      <img src={"/images/snek_symbols/snek_i.png"} className="w-full h-full" alt="" />
+    ),
+    weight: 0,
+    reward: 0,
+    id: 6
+  },
+  ///////////////////////////////////
+
+  {
+    label: "Alien",
+    media: (
+      <img src={"/images/snek_symbols/muscle.png"} className="w-full h-full" alt="" />
+    ),
+    weight: 6,
+    reward: 6,
+    id: 5
+  },
+  {
+    label: "Commet",
+    media: (
+      <img
+        src={"/images/snek_symbols/can.png"}
+        className="w-full h-full"
+        alt=""
+      />
+    ),
+    weight: 5,
+    reward: 5,
+    id: 4
+  },
+  {
+    label: "Jetpack",
+    media: (
+      <img
+        src={"/images/snek_symbols/twice.png"}
+        className="w-full h-full"
+        alt=""
+      />
+    ),
+    weight: 4,
+    reward: 4,
+    id: 3
+  },
+  {
+    label: "Netbula",
+    media: (
+      <img
+        src={"/images/snek_symbols/gentle.png"}
+        className="w-full h-full"
+        alt=""
+      />
+    ),
+    weight: 3,
+    reward: 3,
+    id: 2
+  },
+  {
+    label: "Rocket",
+    media: (
+      <img
+        src={"/images/snek_symbols/text.png"}
+        className="w-full h-full"
+        alt=""
+      />
+    ),
+    weight: 2,
+    reward: 2,
+    id: 1
+  },
+  {
+    label: "Saturn",
+    media: (
+      <img
+        src={"/images/snek_symbols/bug.png"}
+        className="w-full h-full"
+        alt=""
+      />
+    ),
+    weight: 1,
+    reward: 1,
+    id: 0
+  }
+];
+

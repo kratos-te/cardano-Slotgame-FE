@@ -24,3 +24,15 @@ export const errorAlert = (text: string) => {
     theme: "colored",
   });
 };
+
+export const warningAlert = (text: string) => {
+  toast.warning(text, {
+    position: "top-right",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    theme: "colored"
+  });
+};

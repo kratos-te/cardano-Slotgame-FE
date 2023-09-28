@@ -8,5 +8,9 @@ const nextConfig = {
     };
     return config;
   },
+  output: 'export',
+    images: {
+        domains: ['kfdniefadaanbjodldohaedphafoffoh'],
+    },
 };
 module.exports = nextConfig;

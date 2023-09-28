@@ -9,6 +9,8 @@ export interface UserContextProps {
   address: string;
   setUserWallet: Function;
   userwallet: any;
+  isConnected: boolean;
+  setIsConnected: Function;
 }
 
 // Create the User context
@@ -24,6 +26,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
   });
   const [address, setAddress] = useState("");
   const [userwallet, setUserWallet] = useState("");
+  const [isConnected, setIsConnected] = useState(false);
 
   return (
     <UserContext.Provider
@@ -33,7 +36,9 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
         setWalletBalance,
         address,
         userwallet,
-        setUserWallet
+        setUserWallet,
+        isConnected,
+        setIsConnected
       }}
     >
       {children}

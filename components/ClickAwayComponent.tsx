@@ -3,13 +3,16 @@ import { useRef, useEffect, ReactNode } from "react";
 const ClickAwayComponent = ({
   onClickAway,
   children,
+  disabled
 }: {
   onClickAway: Function;
   children: ReactNode;
+  disabled: boolean;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (disabled) return;
     const handleClickOutside = (event: MouseEvent) => {
       if (ref.current && !ref.current.contains(event.target as Node)) {
         onClickAway();

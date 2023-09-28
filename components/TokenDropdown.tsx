@@ -8,10 +8,10 @@ const TokenDropdown = () => {
 
   return (
     <div
-      className="left-24 text-[16px] font-bold text-yellow-300 absolute z-30 -bottom-11 flex items-center justify-center uppercase leading-[16px] w-[160px] text-center group"
+      className="left-24 text-[16px] font-bold text-yellow-300 absolute z-30 -bottom-11 flex items-center justify-center uppercase leading-[16px] w-[160px] text-center group max-lg:left-16 max-lg:-bottom-6 max-md:left-12 max-md:bottom-1 max-sm:left-0  max-sm:-bottom-8"
       title="Active Token"
     >
-      <label className="flex items-center text-xl">
+      <label className="flex items-center text-xl  max-lg:text-lg max-sm:text-md">
         {token} <DownArrow className="group-hover:rotate-180" />
       </label>
       <div className="uppercase bg-[#431043] rounded-md absolute top-[28px] overflow-hidden invisible group-hover:visible">
